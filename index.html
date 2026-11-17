@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rubén Barrado Pastor | Desarrollador DAM & Web</title>
-    <meta name="description" content="Portafolio profesional de Rubén Barrado Pastor. Desarrollador de Aplicaciones Multiplataforma (DAM), Web y Backend en Madrid.">
+    <title>Rubén Barrado Pastor | Software & Web Developer | DAM</title>
+    <meta name="description" content="Portafolio profesional de Rubén Barrado Pastor. Técnico en Desarrollo de Aplicaciones Multiplataforma (DAM) especializado en software estructurado, backend, automatización e interfaces interactivas.">
     <meta name="author" content="Rubén Barrado Pastor">
 
-    <!-- Open Graph / Meta para compartir -->
+    <!-- Open Graph / Redes Sociales -->
     <meta property="og:title" content="Rubén Barrado Pastor | Portafolio Profesional">
-    <meta property="og:description" content="Desarrollador de Aplicaciones Multiplataforma (DAM) | Web & Backend. Especializado en automatización e interfaces interactivas.">
+    <meta property="og:description" content="Técnico en Desarrollo de Aplicaciones Multiplataforma (DAM) | Software & Web Developer.">
     <meta property="og:type" content="website">
 
     <!-- Favicon SVG moderno -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%230f172a'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='900' font-size='50' fill='%236366f1'>&lt;R/&gt;</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%230b0f19'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='900' font-size='50' fill='%236366f1'>&lt;R/&gt;</text></svg>">
 
     <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome 6 (Iconos generales) -->
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- FontAwesome 6 (Iconografía general) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Devicon (Iconos oficiales de tecnologías de programación) -->
+    <!-- Devicon (Logotipos oficiales de tecnologías de software) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-    <!-- Tailwind CSS (Play CDN) -->
+    <!-- Tailwind CSS (Play CDN) con configuración de tema oscuro avanzado -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -39,10 +42,10 @@
                     },
                     colors: {
                         dark: {
-                            950: '#06080e',
-                            900: '#0b0f19',
+                            950: '#06080e', // Fondo ultra oscuro base
+                            900: '#0b0f19', // Fondo secundario tipo Vercel / GitHub
                             850: '#111827',
-                            800: '#1f293d',
+                            800: '#1e293b',
                             700: '#334155'
                         },
                         accent: {
@@ -60,13 +63,6 @@
                     },
                     animation: {
                         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
                     }
                 }
             }
@@ -74,13 +70,12 @@
     </script>
 
     <style>
-        /* Estilos personalizados para efectos ultra-pulidos Dark Mode */
+        /* Estilos globales y scrollbar pulida estilo Vercel */
         ::selection {
             background-color: rgba(99, 102, 241, 0.35);
             color: #ffffff;
         }
 
-        /* Scrollbar estilizada estilo GitHub/Vercel */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -88,14 +83,14 @@
             background: #06080e;
         }
         ::-webkit-scrollbar-thumb {
-            background: #1f293d;
+            background: #1e293b;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
             background: #334155;
         }
 
-        /* Fondo con malla sutil de gradientes y patrón de rejilla */
+        /* Malla geométrica de fondo sutil */
         .bg-grid-pattern {
             background-size: 40px 40px;
             background-image: 
@@ -103,22 +98,22 @@
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
         }
 
-        /* Efecto de brillo de borde para tarjetas */
+        /* Tarjeta Glassmorphism corporativa */
         .glass-card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.75) 0%, rgba(11, 15, 25, 0.85) 100%);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.07);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .glass-card:hover {
-            border-color: rgba(99, 102, 241, 0.4);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 30px -8px rgba(99, 102, 241, 0.2);
+            border-color: rgba(99, 102, 241, 0.45);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 30px -8px rgba(99, 102, 241, 0.25);
         }
 
-        /* Animación suave para badges y botones */
+        /* Efecto de resplandor para botones primarios */
         .btn-glow {
             position: relative;
             overflow: hidden;
@@ -144,11 +139,11 @@
 
 <body class="bg-dark-950 text-slate-300 font-sans antialiased min-h-screen relative overflow-x-hidden selection:bg-indigo-500/30">
 
-    <!-- Fondo de gradiente ambiental decorativo (Luces de fondo tipo Vercel) -->
+    <!-- Luces de fondo ambientales difusas -->
     <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
-    <div class="fixed -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-gradient-to-b from-indigo-600/15 via-purple-600/10 to-transparent blur-[120px] pointer-events-none z-0"></div>
-    <div class="fixed top-1/3 -right-60 w-[500px] h-[500px] bg-blue-600/10 blur-[130px] pointer-events-none z-0"></div>
-    <div class="fixed bottom-10 -left-60 w-[500px] h-[500px] bg-accent-glow/10 blur-[130px] pointer-events-none z-0"></div>
+    <div class="fixed -top-40 left-1/2 -translate-x-1/2 w-[750px] h-[500px] bg-gradient-to-b from-indigo-600/15 via-purple-600/10 to-transparent blur-[130px] pointer-events-none z-0"></div>
+    <div class="fixed top-1/3 -right-60 w-[550px] h-[550px] bg-blue-600/10 blur-[140px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-10 -left-60 w-[550px] h-[550px] bg-accent-glow/10 blur-[140px] pointer-events-none z-0"></div>
 
     <!-- ================= NAVBAR ================= -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-dark-950/80 border-b border-slate-800/80 transition-all duration-300" id="main-header">
@@ -169,7 +164,7 @@
                 </div>
             </a>
 
-            <!-- Desktop Navigation Links -->
+            <!-- Navegación de Escritorio -->
             <nav class="hidden md:flex items-center gap-1 bg-dark-900/90 border border-slate-800/90 rounded-full px-4 py-1.5 shadow-inner">
                 <a href="#hero" class="nav-link px-4 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-full transition-all duration-200">Inicio</a>
                 <a href="#sobre-mi" class="nav-link px-4 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-full transition-all duration-200">Sobre mí</a>
@@ -178,7 +173,7 @@
                 <a href="#contacto" class="nav-link px-4 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-full transition-all duration-200">Contacto</a>
             </nav>
 
-            <!-- Status Pill + GitHub CTA -->
+            <!-- Pill de Estado & Enlace Directo a GitHub -->
             <div class="hidden sm:flex items-center gap-3">
                 <div class="flex items-center gap-2 bg-dark-900/90 border border-emerald-500/20 rounded-full px-3 py-1.5 text-xs font-medium text-emerald-400">
                     <span class="relative flex h-2 w-2">
@@ -195,14 +190,14 @@
                 </a>
             </div>
 
-            <!-- Mobile Menu Toggle Button -->
+            <!-- Botón de Menú Móvil -->
             <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" 
                     class="md:hidden text-slate-300 hover:text-white p-2 rounded-lg bg-dark-900 border border-slate-800 focus:outline-none focus:ring-2 focus:ring-accent">
                 <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
 
-        <!-- Mobile Drawer Menu -->
+        <!-- Cajón de Navegación Móvil -->
         <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-dark-900/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-2">
             <div class="flex items-center justify-between pb-3 mb-2 border-b border-slate-800 text-xs">
                 <span class="text-slate-400 font-mono">Navegación</span>
@@ -231,31 +226,41 @@
         <!-- ================= 1. HERO SECTION ================= -->
         <section id="hero" class="pt-16 sm:pt-24 lg:pt-28 flex flex-col items-center text-center">
             
-            <!-- Badge de Titular / Status -->
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-950/60 border border-indigo-500/30 text-indigo-300 text-xs sm:text-sm font-mono mb-8 shadow-inner animate-pulse-slow">
+            <!-- Badge de Titular / Status (Entrada suave fade-up) -->
+            <div data-aos="fade-up" data-aos-duration="700" 
+                 class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-950/60 border border-indigo-500/30 text-indigo-300 text-xs sm:text-sm font-mono mb-8 shadow-inner animate-pulse-slow">
                 <span class="flex h-2 w-2 rounded-full bg-indigo-400"></span>
-                <span>Desarrollador Multiplataforma (DAM) | Web & Backend</span>
+                <span>Técnico en Desarrollo de Aplicaciones Multiplataforma (DAM)</span>
             </div>
 
-            <!-- Nombre Principal -->
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
+            <!-- Nombre Principal con animación fade-up -->
+            <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" 
+                class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
                 Hola, soy <br class="hidden sm:block"/>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
                     Rubén Barrado Pastor
                 </span>
             </h1>
 
-            <!-- Subtítulo / Pitch -->
-            <p class="max-w-2xl text-base sm:text-lg lg:text-xl text-slate-400 font-light leading-relaxed mb-10">
-                Estudiante avanzado de desarrollo de software enfocado en la <strong class="text-slate-200 font-semibold">automatización de flujos</strong>, <strong class="text-slate-200 font-semibold">arquitectura de backend</strong> e interfaces web interactivas en tiempo real para comunidades digitales.
+            <!-- Titular & Enfoque Profesional -->
+            <h2 data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" 
+                class="text-xl sm:text-2xl text-slate-200 font-medium mb-5 tracking-tight">
+                Software & Web Developer
+            </h2>
+
+            <!-- Subtítulo / Descripción concisa -->
+            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" 
+               class="max-w-2xl text-base sm:text-lg text-slate-400 font-light leading-relaxed mb-10">
+                Especializado en la creación de software robusto, arquitecturas de backend estructuradas, automatización de sistemas locales e interfaces interactivas en tiempo real.
             </p>
 
-            <!-- Llamadas a la acción (CTAs) -->
-            <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto justify-center mb-16">
-                <!-- CTA Principal: Ver Proyectos -->
+            <!-- Llamadas a la Acción (CTAs) -->
+            <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" 
+                 class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto justify-center mb-16">
+                <!-- CTA Principal: Proyectos -->
                 <a href="#proyectos" 
                    class="btn-glow w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-indigo-600 via-indigo-500 to-purple-600 hover:from-indigo-500 hover:to-purple-500 shadow-glow hover:shadow-glow-lg transition-all duration-300">
-                    <span>Ver mis proyectos</span>
+                    <span>Ver proyectos</span>
                     <i class="fa-solid fa-arrow-down text-sm"></i>
                 </a>
 
@@ -263,13 +268,14 @@
                 <a href="https://github.com/rubenillob-dot" target="_blank" rel="noopener noreferrer" 
                    class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-xl font-semibold text-slate-200 bg-dark-900/90 hover:bg-slate-800/90 border border-slate-700/80 hover:border-slate-500 transition-all duration-300 shadow-card">
                     <i class="fa-brands fa-github text-xl"></i>
-                    <span>Explorar GitHub</span>
+                    <span>GitHub</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400"></i>
                 </a>
             </div>
 
-            <!-- Terminal / Code Showcase Card (Estilo Vercel/Mac Terminal) -->
-            <div class="w-full max-w-3xl glass-card rounded-2xl overflow-hidden shadow-card text-left font-mono text-xs sm:text-sm border border-slate-800">
+            <!-- Terminal Showcase Card (Aparición elegante con fade-up) -->
+            <div data-aos="fade-up" data-aos-duration="900" data-aos-delay="500" 
+                 class="w-full max-w-3xl glass-card rounded-2xl overflow-hidden shadow-card text-left font-mono text-xs sm:text-sm border border-slate-800">
                 <!-- Barra superior de la ventana -->
                 <div class="flex items-center justify-between px-4 py-3 bg-dark-900/90 border-b border-slate-800/90">
                     <div class="flex items-center gap-2">
@@ -284,37 +290,37 @@
                     </div>
                 </div>
 
-                <!-- Contenido del archivo de código -->
+                <!-- Contenido del archivo de perfil -->
                 <div class="p-5 sm:p-6 space-y-2 bg-dark-950/60 leading-relaxed overflow-x-auto">
                     <p><span class="text-purple-400">const</span> <span class="text-indigo-300">developer</span> = {</p>
                     <p class="pl-4">
                         <span class="text-slate-400">nombre:</span> <span class="text-emerald-300">"Rubén Barrado Pastor"</span>,
                     </p>
                     <p class="pl-4">
-                        <span class="text-slate-400">ubicacion:</span> <span class="text-emerald-300">"Madrid, España"</span>,
+                        <span class="text-slate-400">formacion:</span> <span class="text-emerald-300">"2º DAM (Madrid, España)"</span>,
                     </p>
                     <p class="pl-4">
-                        <span class="text-slate-400">formacion:</span> <span class="text-emerald-300">"2º DAM (Desarrollo de Aplicaciones Multiplataforma)"</span>,
+                        <span class="text-slate-400">especialidad:</span> <span class="text-cyan-300">"Desarrollo Estructurado, Automatización & Realtime Web"</span>,
                     </p>
                     <p class="pl-4">
-                        <span class="text-slate-400">rolComunidad:</span> <span class="text-cyan-300">"Desarrollador Técnico para ImArixu (Twitch)"</span>,
+                        <span class="text-slate-400">comunidadTwitch:</span> <span class="text-purple-300">"Desarrollador de herramientas interactivas (ImArixu)"</span>,
                     </p>
                     <p class="pl-4">
-                        <span class="text-slate-400">enfoque:</span> [
-                        <span class="text-yellow-300">"Automatización"</span>, 
-                        <span class="text-yellow-300">"Interacción en Vivo"</span>, 
-                        <span class="text-yellow-300">"Backend & POO"</span>
+                        <span class="text-slate-400">stackPrincipal:</span> [
+                        <span class="text-yellow-300">"Java"</span>, 
+                        <span class="text-yellow-300">"Python"</span>, 
+                        <span class="text-yellow-300">"JavaScript"</span>, 
+                        <span class="text-yellow-300">"SQL"</span>
                         ],
                     </p>
                     <p class="pl-4">
-                        <span class="text-slate-400">estadoActual:</span> <span class="text-emerald-400">"Abierto a proyectos de impacto y prácticas profesionales"</span>
+                        <span class="text-slate-400">disponible:</span> <span class="text-emerald-400">true</span>
                     </p>
                     <p>};</p>
                     <p class="pt-2 text-slate-500 flex items-center gap-2">
                         <span class="text-emerald-400">➜</span>
                         <span class="text-indigo-400">~</span>
-                        <span class="text-slate-300 animate-pulse">echo $READY_TO_BUILD</span>
-                        <span class="text-slate-400">// true</span>
+                        <span class="text-slate-300 animate-pulse">ready_to_build --clean-code</span>
                     </p>
                 </div>
             </div>
@@ -325,10 +331,10 @@
         <!-- ================= 2. SOBRE MÍ & SKILLS ================= -->
         <section id="sobre-mi" class="scroll-mt-28 space-y-16">
             
-            <!-- Encabezado de Sección -->
-            <div class="flex flex-col items-center text-center space-y-3">
+            <!-- Encabezado de Sección con AOS -->
+            <div data-aos="fade-up" data-aos-duration="700" class="flex flex-col items-center text-center space-y-3">
                 <span class="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400 bg-indigo-950/40 border border-indigo-800/40 px-3 py-1 rounded-full">
-                    Trayectoria & Filosofía
+                    Trayectoria & Perfil
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
                     Sobre mí
@@ -336,78 +342,82 @@
                 <div class="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
             </div>
 
-            <!-- Grid de Bio y Destacados -->
+            <!-- Grid de Biografía y Bloques Clave -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
-                <!-- Columna Izquierda: Texto de Biografía -->
-                <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl space-y-5 border border-slate-800/80">
+                <!-- Columna Biografía (Fade-up) -->
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" 
+                     class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl space-y-5 border border-slate-800/80">
                     <div class="flex items-center gap-3 pb-4 border-b border-slate-800">
                         <div class="w-10 h-10 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-lg">
-                            <i class="fa-solid fa-user-gear"></i>
+                            <i class="fa-solid fa-code-branch"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold text-white">Perfil Profesional</h3>
+                            <h3 class="text-lg font-bold text-white">Desarrollo de Software & Enfoque</h3>
                             <p class="text-xs text-slate-400 font-mono">Madrid, España • Estudiante 2º DAM</p>
                         </div>
                     </div>
 
                     <p class="text-slate-300 leading-relaxed text-base">
-                        Estudiante de <strong class="text-white font-medium">2º de DAM en Madrid</strong>. Combino mi formación técnica en desarrollo de software con mi experiencia como <strong class="text-indigo-300 font-medium">desarrollador técnico para la comunidad de la streamer ImArixu en Twitch</strong>.
+                        Estudiante de <strong class="text-white font-medium">2º de DAM en Madrid</strong>. Combino el desarrollo estructurado de software con la creación de herramientas web interactivas en tiempo real para comunidades de Twitch.
                     </p>
 
                     <p class="text-slate-300 leading-relaxed text-base">
-                        Me apasiona resolver problemas automatizando procesos y creando interfaces interactivas en tiempo real. Disfruto construyendo puentes entre la lógica de programación robusta (gestión de concurrencia, acceso a datos, backend) y la interacción ágil del usuario final.
+                        Me especializo en <strong class="text-indigo-300 font-medium">resolver problemas técnicos mediante automatización y soluciones a medida</strong>, asegurando una arquitectura de software limpia, código mantenible y una respuesta instantánea en entornos de alta demanda.
                     </p>
 
-                    <!-- Lista de Pilares de Trabajo -->
+                    <!-- Pilares Técnicos -->
                     <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div class="flex items-start gap-3 p-3 rounded-xl bg-dark-900/70 border border-slate-800/60">
-                            <i class="fa-solid fa-bolt text-indigo-400 text-sm mt-1"></i>
+                            <i class="fa-solid fa-gears text-indigo-400 text-sm mt-1"></i>
                             <div>
-                                <h4 class="text-sm font-semibold text-white">Tiempo Real</h4>
-                                <p class="text-xs text-slate-400">Paneles y dinámicas web para eventos con alta concurrencia.</p>
+                                <h4 class="text-sm font-semibold text-white">Automatización</h4>
+                                <p class="text-xs text-slate-400">Scripts en Python orientados a eficiencia y ahorro de tiempo operativo.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-3 p-3 rounded-xl bg-dark-900/70 border border-slate-800/60">
-                            <i class="fa-solid fa-robot text-purple-400 text-sm mt-1"></i>
+                            <i class="fa-solid fa-satellite-dish text-purple-400 text-sm mt-1"></i>
                             <div>
-                                <h4 class="text-sm font-semibold text-white">Automatización</h4>
-                                <p class="text-xs text-slate-400">Scripts en Python que ahorran tiempo y eliminan fricción.</p>
+                                <h4 class="text-sm font-semibold text-white">Tiempo Real</h4>
+                                <p class="text-xs text-slate-400">Paneles y aplicaciones web para dinámicas en vivo en Twitch.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Columna Derecha: Métricas / Credenciales -->
+                <!-- Columna Destacados y Credenciales (Fade-up escalonado) -->
                 <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
                     
-                    <div class="glass-card p-6 rounded-2xl border border-slate-800 flex items-center gap-4">
+                    <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" 
+                         class="glass-card p-6 rounded-2xl border border-slate-800 flex items-center gap-4">
                         <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20 flex items-center justify-center text-xl shrink-0">
                             <i class="fa-brands fa-twitch"></i>
                         </div>
                         <div>
-                            <span class="text-2xl font-bold text-white tracking-tight">Twitch Dev</span>
-                            <p class="text-xs text-slate-400">Herramientas en vivo para la comunidad de ImArixu</p>
+                            <span class="text-2xl font-bold text-white tracking-tight">Comunidad Twitch</span>
+                            <p class="text-xs text-slate-400">Desarrollo de herramientas en directo (Comunidad ImArixu)</p>
                         </div>
                     </div>
 
-                    <div class="glass-card p-6 rounded-2xl border border-slate-800 flex items-center gap-4">
+                    <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" 
+                         class="glass-card p-6 rounded-2xl border border-slate-800 flex items-center gap-4">
                         <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex items-center justify-center text-xl shrink-0">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
                         <div>
                             <span class="text-2xl font-bold text-white tracking-tight">2º de DAM</span>
-                            <p class="text-xs text-slate-400">Desarrollo de Aplicaciones Multiplataforma (Madrid)</p>
+                            <p class="text-xs text-slate-400">Desarrollo Multiplataforma, POO y Bases de Datos</p>
                         </div>
                     </div>
 
-                    <div class="glass-card p-6 rounded-2xl border border-slate-800 flex items-center gap-4">
+                    <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" 
+                         class="glass-card p-6 rounded-2xl border border-slate-800 flex items-center gap-4">
                         <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 flex items-center justify-center text-xl shrink-0">
                             <i class="fa-brands fa-fedora"></i>
                         </div>
                         <div>
                             <span class="text-2xl font-bold text-white tracking-tight">Entorno Linux</span>
-                            <p class="text-xs text-slate-400">Flujo de trabajo optimizado sobre Fedora y CLI</p>
+                            <p class="text-xs text-slate-400">Fedora como sistema diario, scripts Bash y CLI</p>
                         </div>
                     </div>
 
@@ -418,17 +428,18 @@
             <!-- ================= SKILLS / TECNOLOGÍAS ================= -->
             <div id="skills" class="scroll-mt-28 space-y-8 pt-6">
                 
-                <div class="flex flex-col items-center text-center space-y-2">
+                <div data-aos="fade-up" data-aos-duration="700" class="flex flex-col items-center text-center space-y-2">
                     <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Stack Tecnológico</span>
                     <h3 class="text-2xl sm:text-3xl font-bold text-white">Tecnologías & Herramientas</h3>
-                    <p class="text-slate-400 text-sm max-w-lg">Lenguajes y herramientas que empleo activamente para dar vida a proyectos de software, web y automatización.</p>
+                    <p class="text-slate-400 text-sm max-w-lg">Lenguajes y herramientas que empleo de forma continua para construir aplicaciones y automatizaciones.</p>
                 </div>
 
-                <!-- Grid de Tarjetas de Tecnologías -->
+                <!-- Grid con aparición escalonada (Staggered Animation via AOS delays) -->
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
 
                     <!-- Java -->
-                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center group">
+                    <div data-aos="fade-up" data-aos-delay="50" data-aos-duration="600" 
+                         class="glass-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
                         <div class="w-14 h-14 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 group-hover:border-red-500/40 transition-all">
                             <i class="devicon-java-plain colored"></i>
                         </div>
@@ -437,7 +448,8 @@
                     </div>
 
                     <!-- Python -->
-                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center group">
+                    <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="600" 
+                         class="glass-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
                         <div class="w-14 h-14 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 group-hover:border-yellow-500/40 transition-all">
                             <i class="devicon-python-plain colored"></i>
                         </div>
@@ -446,43 +458,39 @@
                     </div>
 
                     <!-- JavaScript -->
-                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center group">
+                    <div data-aos="fade-up" data-aos-delay="150" data-aos-duration="600" 
+                         class="glass-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
                         <div class="w-14 h-14 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 group-hover:border-yellow-400/40 transition-all">
                             <i class="devicon-javascript-plain colored"></i>
                         </div>
                         <h4 class="font-bold text-white text-base">JavaScript</h4>
-                        <span class="text-xs font-mono text-slate-400 mt-1">DOM, ES6+ & Realtime</span>
+                        <span class="text-xs font-mono text-slate-400 mt-1">ES6+, DOM & Realtime</span>
                     </div>
 
-                    <!-- Bases de Datos SQL -->
-                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center group">
+                    <!-- HTML / CSS -->
+                    <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="600" 
+                         class="glass-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
+                        <div class="w-14 h-14 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 group-hover:border-orange-500/40 transition-all gap-1.5">
+                            <i class="devicon-html5-plain colored"></i>
+                            <i class="devicon-css3-plain colored"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-base">HTML / CSS</h4>
+                        <span class="text-xs font-mono text-slate-400 mt-1">Semántica, Flexbox & Grid</span>
+                    </div>
+
+                    <!-- SQL -->
+                    <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="600" 
+                         class="glass-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
                         <div class="w-14 h-14 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 group-hover:border-blue-400/40 transition-all text-blue-400">
                             <i class="fa-solid fa-database text-2xl"></i>
                         </div>
-                        <h4 class="font-bold text-white text-base">SQL / Bases de Datos</h4>
-                        <span class="text-xs font-mono text-slate-400 mt-1">Consultas, DDL & DML</span>
-                    </div>
-
-                    <!-- HTML5 -->
-                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center group">
-                        <div class="w-14 h-14 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 group-hover:border-orange-500/40 transition-all">
-                            <i class="devicon-html5-plain colored"></i>
-                        </div>
-                        <h4 class="font-bold text-white text-base">HTML5</h4>
-                        <span class="text-xs font-mono text-slate-400 mt-1">Semántica & Accesibilidad</span>
-                    </div>
-
-                    <!-- CSS3 -->
-                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center group">
-                        <div class="w-14 h-14 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 group-hover:border-blue-500/40 transition-all">
-                            <i class="devicon-css3-plain colored"></i>
-                        </div>
-                        <h4 class="font-bold text-white text-base">CSS3</h4>
-                        <span class="text-xs font-mono text-slate-400 mt-1">Flexbox, Grid & Animaciones</span>
+                        <h4 class="font-bold text-white text-base">SQL</h4>
+                        <span class="text-xs font-mono text-slate-400 mt-1">Bases de Datos & Consultas</span>
                     </div>
 
                     <!-- Git -->
-                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center group">
+                    <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="600" 
+                         class="glass-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
                         <div class="w-14 h-14 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 group-hover:border-orange-600/40 transition-all">
                             <i class="devicon-git-plain colored"></i>
                         </div>
@@ -491,28 +499,23 @@
                     </div>
 
                     <!-- VS Code -->
-                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center group">
+                    <div data-aos="fade-up" data-aos-delay="350" data-aos-duration="600" 
+                         class="glass-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
                         <div class="w-14 h-14 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 group-hover:border-sky-500/40 transition-all">
                             <i class="devicon-vscode-plain colored"></i>
                         </div>
                         <h4 class="font-bold text-white text-base">VS Code</h4>
-                        <span class="text-xs font-mono text-slate-400 mt-1">Entorno de desarrollo</span>
+                        <span class="text-xs font-mono text-slate-400 mt-1">IDE & Productividad</span>
                     </div>
 
                     <!-- Linux (Fedora) -->
-                    <div class="glass-card p-5 rounded-xl flex flex-col items-center text-center group col-span-2 sm:col-span-1 lg:col-span-4">
-                        <div class="flex flex-col sm:flex-row items-center gap-4 justify-center">
-                            <div class="w-14 h-14 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-3xl group-hover:scale-110 group-hover:border-blue-400/40 transition-all">
-                                <i class="devicon-fedora-plain colored"></i>
-                            </div>
-                            <div class="text-center sm:text-left">
-                                <h4 class="font-bold text-white text-base flex items-center justify-center sm:justify-start gap-2">
-                                    <span>Linux (Fedora)</span>
-                                    <span class="text-[10px] bg-blue-500/20 text-blue-300 border border-blue-500/30 px-2 py-0.5 rounded font-mono">Daily Driver</span>
-                                </h4>
-                                <span class="text-xs font-mono text-slate-400">Terminal Bash, gestión de paquetes y administración de sistemas</span>
-                            </div>
+                    <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="600" 
+                         class="glass-card p-5 rounded-xl flex flex-col items-center text-center group cursor-default">
+                        <div class="w-14 h-14 rounded-xl bg-dark-900 border border-slate-800 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 group-hover:border-blue-400/40 transition-all">
+                            <i class="devicon-fedora-plain colored"></i>
                         </div>
+                        <h4 class="font-bold text-white text-base">Linux (Fedora)</h4>
+                        <span class="text-xs font-mono text-slate-400 mt-1">Sistema operativo & CLI</span>
                     </div>
 
                 </div>
@@ -525,28 +528,29 @@
         <!-- ================= 3. PROYECTOS DESTACADOS ================= -->
         <section id="proyectos" class="scroll-mt-28 space-y-12">
             
-            <!-- Encabezado de Sección -->
-            <div class="flex flex-col items-center text-center space-y-3">
+            <!-- Encabezado de Proyectos -->
+            <div data-aos="fade-up" data-aos-duration="700" class="flex flex-col items-center text-center space-y-3">
                 <span class="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400 bg-indigo-950/40 border border-indigo-800/40 px-3 py-1 rounded-full">
-                    Casos Reales & Código
+                    Casos de Éxito & Repositorios
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
                     Proyectos Destacados
                 </h2>
                 <p class="text-slate-400 text-sm max-w-xl">
-                    Selección de proyectos que demuestran capacidades en interacción en directo, automatización y bases sólidas de ingeniería de software.
+                    Desarrollos que integran automatización, interfaces en directo para comunidades masivas e ingeniería de software concurrente.
                 </p>
                 <div class="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
             </div>
 
-            <!-- Grid de Tarjetas de Proyectos -->
+            <!-- Grid de Tarjetas con animaciones fade-up escalonadas -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 
                 <!-- PROYECTO 1: Operación Temazo -->
-                <article class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800/80 group">
+                <article data-aos="fade-up" data-aos-duration="750" data-aos-delay="100" 
+                         class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800/80 group">
                     <div>
-                        <!-- Header del Card con simulación visual -->
-                        <div class="p-6 bg-gradient-to-b from-indigo-950/40 to-transparent border-b border-slate-800/60 relative">
+                        <!-- Encabezado de la Tarjeta -->
+                        <div class="p-6 bg-gradient-to-b from-indigo-950/40 to-transparent border-b border-slate-800/60">
                             <div class="flex items-center justify-between gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1.5 text-xs font-mono font-medium px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
                                     <i class="fa-solid fa-broadcast-tower text-[10px]"></i>
@@ -554,7 +558,7 @@
                                 </span>
                                 <div class="flex items-center gap-1 text-slate-500 text-xs">
                                     <i class="fa-solid fa-circle text-[8px] text-emerald-400"></i>
-                                    <span>Activo en directo</span>
+                                    <span>Producción en directo</span>
                                 </div>
                             </div>
                             <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors flex items-center justify-between">
@@ -563,36 +567,36 @@
                             </h3>
                         </div>
 
-                        <!-- Cuerpo del Card -->
+                        <!-- Contenido -->
                         <div class="p-6 space-y-4">
                             <p class="text-slate-300 text-sm leading-relaxed">
-                                Panel web interactivo diseñado para directos de Twitch. Integra un sistema de <strong class="text-white">puntuación automática</strong> y cálculo de medias para evaluar temas musicales en vivo, además de la gestión exclusiva de <strong class="text-yellow-400">pases de oro</strong>.
+                                Panel web interactivo diseñado para directos con <strong class="text-white">sistema de puntuación automática</strong> en tiempo real. Gestiona la valoración de temas musicales en directo y administra el sistema de pases de oro para dinámicas de streaming.
                             </p>
                             
                             <ul class="text-xs text-slate-400 space-y-2 font-mono">
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-check text-indigo-400"></i>
-                                    Cálculo dinámico de puntuaciones sin recarga de página.
+                                    Cálculo dinámico y reactivo sin necesidad de recarga.
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-check text-indigo-400"></i>
-                                    Lógica de pase de oro para momentos destacados en stream.
+                                    Optimizado para interacción visual fluida en directo.
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Footer del Card: Tecnologías y Enlaces -->
+                    <!-- Footer de Tarjeta -->
                     <div class="p-6 pt-0 space-y-5">
                         <div class="flex flex-wrap gap-2">
                             <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-yellow-500/10 text-yellow-300 border border-yellow-500/20">
-                                JavaScript (ES6+)
+                                JavaScript
                             </span>
                             <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-orange-500/10 text-orange-300 border border-orange-500/20">
-                                HTML5
+                                HTML
                             </span>
                             <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-blue-500/10 text-blue-300 border border-blue-500/20">
-                                CSS3
+                                CSS
                             </span>
                         </div>
 
@@ -602,16 +606,17 @@
                                 <span>Ver repositorio en GitHub</span>
                                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </a>
-                            <span class="text-slate-600 text-xs font-mono">#web-tool</span>
+                            <span class="text-slate-600 text-xs font-mono">#twitch-tool</span>
                         </div>
                     </div>
                 </article>
 
-                <!-- PROYECTO 2: Organizador Automático de Carpetas -->
-                <article class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800/80 group">
+                <!-- PROYECTO 2: Organizador Automático -->
+                <article data-aos="fade-up" data-aos-duration="750" data-aos-delay="200" 
+                         class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800/80 group">
                     <div>
-                        <!-- Header del Card -->
-                        <div class="p-6 bg-gradient-to-b from-yellow-950/20 to-transparent border-b border-slate-800/60 relative">
+                        <!-- Encabezado de la Tarjeta -->
+                        <div class="p-6 bg-gradient-to-b from-yellow-950/20 to-transparent border-b border-slate-800/60">
                             <div class="flex items-center justify-between gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1.5 text-xs font-mono font-medium px-2.5 py-1 rounded-md bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">
                                     <i class="fa-solid fa-bolt-lightning text-[10px]"></i>
@@ -623,41 +628,41 @@
                                 </div>
                             </div>
                             <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors flex items-center justify-between">
-                                Organizador Automático de Carpetas
+                                Organizador Automático
                                 <i class="fa-solid fa-folder-tree text-slate-600 group-hover:text-yellow-400 group-hover:scale-110 transition-all text-lg"></i>
                             </h3>
                         </div>
 
-                        <!-- Cuerpo del Card -->
+                        <!-- Contenido -->
                         <div class="p-6 space-y-4">
                             <p class="text-slate-300 text-sm leading-relaxed">
-                                Script de automatización en Python diseñado para resolver el desorden en directorios de descargas y trabajo local. Realiza una <strong class="text-white">clasificación rápida y autónoma de archivos</strong> analizando extensiones, fechas y patrones predefinidos.
+                                Script de automatización en Python enfocado en la <strong class="text-white">clasificación eficiente de archivos del sistema</strong>. Organiza descargas y carpetas de trabajo local analizando extensiones, fechas y patrones personalizados.
                             </p>
                             
                             <ul class="text-xs text-slate-400 space-y-2 font-mono">
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-check text-yellow-400"></i>
-                                    Manipulación del sistema de ficheros de forma segura.
+                                    Gestión segura del sistema de archivos local.
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-check text-yellow-400"></i>
-                                    Manejo automático de colisiones y duplicados.
+                                    Resolución autónoma de conflictos y nombres duplicados.
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Footer del Card: Tecnologías y Enlaces -->
+                    <!-- Footer de Tarjeta -->
                     <div class="p-6 pt-0 space-y-5">
                         <div class="flex flex-wrap gap-2">
                             <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-yellow-500/10 text-yellow-300 border border-yellow-500/20">
-                                Python 3
+                                Python
                             </span>
                             <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-slate-800 text-slate-300 border border-slate-700">
-                                OS / FileSystem API
+                                OS Automation
                             </span>
                             <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-slate-800 text-slate-300 border border-slate-700">
-                                Automation
+                                FileSystem
                             </span>
                         </div>
 
@@ -667,16 +672,17 @@
                                 <span>Ver repositorio en GitHub</span>
                                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </a>
-                            <span class="text-slate-600 text-xs font-mono">#python-script</span>
+                            <span class="text-slate-600 text-xs font-mono">#python-automation</span>
                         </div>
                     </div>
                 </article>
 
-                <!-- PROYECTO 3: Herramientas Stream (Meme-Ari / Consultorio Amor) -->
-                <article class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800/80 group">
+                <!-- PROYECTO 3: Herramientas Stream (Meme-Ari / Consultorio) -->
+                <article data-aos="fade-up" data-aos-duration="750" data-aos-delay="100" 
+                         class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800/80 group">
                     <div>
-                        <!-- Header del Card -->
-                        <div class="p-6 bg-gradient-to-b from-purple-950/30 to-transparent border-b border-slate-800/60 relative">
+                        <!-- Encabezado de la Tarjeta -->
+                        <div class="p-6 bg-gradient-to-b from-purple-950/30 to-transparent border-b border-slate-800/60">
                             <div class="flex items-center justify-between gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1.5 text-xs font-mono font-medium px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 border border-purple-500/20">
                                     <i class="fa-solid fa-fire text-[10px]"></i>
@@ -684,46 +690,46 @@
                                 </span>
                                 <div class="flex items-center gap-1 text-slate-500 text-xs">
                                     <i class="fa-brands fa-twitch text-purple-400"></i>
-                                    <span>ImArixu Events</span>
+                                    <span>Twitch Community</span>
                                 </div>
                             </div>
                             <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-purple-400 transition-colors flex items-center justify-between">
                                 Herramientas Stream
                                 <i class="fa-solid fa-heart-pulse text-slate-600 group-hover:text-purple-400 group-hover:scale-110 transition-all text-lg"></i>
                             </h3>
-                            <p class="text-xs font-mono text-purple-300/80 mt-1">Meme-Ari & Consultorio Amor</p>
+                            <p class="text-xs font-mono text-purple-300/80 mt-1">Meme-Ari / Consultorio</p>
                         </div>
 
-                        <!-- Cuerpo del Card -->
+                        <!-- Contenido -->
                         <div class="p-6 space-y-4">
                             <p class="text-slate-300 text-sm leading-relaxed">
-                                Aplicaciones web interactivas desarrolladas a medida para dinamizar eventos maratonianos en Twitch. Incluye módulos de <strong class="text-white">votación en vivo, visualización de respuestas del chat</strong> y componentes visuales reactivos para overlays de transmisión.
+                                Aplicaciones web de <strong class="text-white">votación e interacción dinámica para Twitch</strong>. Diseñadas para dinamizar eventos maratonianos en directo mediante conteos ágiles de respuestas y componentes visuales reactivos para pantalla.
                             </p>
                             
                             <ul class="text-xs text-slate-400 space-y-2 font-mono">
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-check text-purple-400"></i>
-                                    Interacción masiva optimizada para cero retraso en stream.
+                                    Estructura optimizada para cero retraso durante la transmisión.
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-check text-purple-400"></i>
-                                    Interfaz visual atractiva apta para visualización en directo.
+                                    Diseño visual adaptable para overlays de streaming.
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Footer del Card: Tecnologías y Enlaces -->
+                    <!-- Footer de Tarjeta -->
                     <div class="p-6 pt-0 space-y-5">
                         <div class="flex flex-wrap gap-2">
                             <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-orange-500/10 text-orange-300 border border-orange-500/20">
-                                HTML5
+                                HTML
                             </span>
                             <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-blue-500/10 text-blue-300 border border-blue-500/20">
-                                CSS3
+                                CSS
                             </span>
                             <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-yellow-500/10 text-yellow-300 border border-yellow-500/20">
-                                JavaScript (DOM)
+                                JS
                             </span>
                         </div>
 
@@ -739,10 +745,11 @@
                 </article>
 
                 <!-- PROYECTO 4: Core DAM -->
-                <article class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800/80 group">
+                <article data-aos="fade-up" data-aos-duration="750" data-aos-delay="200" 
+                         class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800/80 group">
                     <div>
-                        <!-- Header del Card -->
-                        <div class="p-6 bg-gradient-to-b from-blue-950/30 to-transparent border-b border-slate-800/60 relative">
+                        <!-- Encabezado de la Tarjeta -->
+                        <div class="p-6 bg-gradient-to-b from-blue-950/30 to-transparent border-b border-slate-800/60">
                             <div class="flex items-center justify-between gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1.5 text-xs font-mono font-medium px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20">
                                     <i class="fa-solid fa-cube text-[10px]"></i>
@@ -750,49 +757,46 @@
                                 </span>
                                 <div class="flex items-center gap-1 text-slate-500 text-xs">
                                     <i class="devicon-java-plain text-red-400"></i>
-                                    <span>Desktop & DB</span>
+                                    <span>Concurrencia & Datos</span>
                                 </div>
                             </div>
                             <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-between">
                                 Core DAM
                                 <i class="fa-solid fa-layer-group text-slate-600 group-hover:text-blue-400 group-hover:scale-110 transition-all text-lg"></i>
                             </h3>
-                            <p class="text-xs font-mono text-blue-300/80 mt-1">Multiplataforma, Hilos & Persistencia</p>
+                            <p class="text-xs font-mono text-blue-300/80 mt-1">Concurrencia, Hilos & SQL</p>
                         </div>
 
-                        <!-- Cuerpo del Card -->
+                        <!-- Contenido -->
                         <div class="p-6 space-y-4">
                             <p class="text-slate-300 text-sm leading-relaxed">
-                                Conjunto de soluciones y aplicaciones desarrolladas durante el ciclo formativo de DAM. Enfoque exhaustivo en <strong class="text-white">gestión concurrente de hilos</strong>, programación orientada a objetos (POO), patrones de diseño y acceso robusto a <strong class="text-white">bases de datos relacionales SQL</strong>.
+                                Prácticas y desarrollos avanzados de <strong class="text-white">programación concurrente, gestión de hilos y acceso a datos</strong>. Implementación de patrones orientados a objetos en Java y persistencia mediante bases de datos relacionales SQL.
                             </p>
                             
                             <ul class="text-xs text-slate-400 space-y-2 font-mono">
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-check text-blue-400"></i>
-                                    Sincronización de hilos y arquitectura multihilo.
+                                    Manejo de hilos, sincronización y prevención de bloqueos.
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <i class="fa-solid fa-check text-blue-400"></i>
-                                    Conectores de datos JDBC y modelado relacional SQL.
+                                    Operaciones CRUD estructuradas y conectores de bases de datos.
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Footer del Card: Tecnologías y Enlaces -->
+                    <!-- Footer de Tarjeta -->
                     <div class="p-6 pt-0 space-y-5">
                         <div class="flex flex-wrap gap-2">
                             <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-red-500/10 text-red-300 border border-red-500/20">
-                                Java SE
+                                Java
                             </span>
                             <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-blue-500/10 text-blue-300 border border-blue-500/20">
                                 SQL
                             </span>
                             <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
-                                Multithreading
-                            </span>
-                            <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-slate-800 text-slate-300 border border-slate-700">
-                                POO
+                                Hilos & Concurrencia
                             </span>
                         </div>
 
@@ -802,7 +806,7 @@
                                 <span>Ver repositorio en GitHub</span>
                                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </a>
-                            <span class="text-slate-600 text-xs font-mono">#desktop-backend</span>
+                            <span class="text-slate-600 text-xs font-mono">#java-core</span>
                         </div>
                     </div>
                 </article>
@@ -815,26 +819,26 @@
         <!-- ================= 4. FOOTER / CONTACTO ================= -->
         <section id="contacto" class="scroll-mt-28 space-y-12">
             
-            <!-- Banner CTA Principal de Contacto -->
-            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-indigo-500/30 relative overflow-hidden text-center sm:text-left">
+            <!-- Banner CTA Principal de Contacto con AOS -->
+            <div data-aos="fade-up" data-aos-duration="800" 
+                 class="glass-card rounded-3xl p-8 sm:p-12 border border-indigo-500/30 relative overflow-hidden text-center sm:text-left">
                 <!-- Efecto de resplandor interior -->
                 <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                     <div class="lg:col-span-8 space-y-4">
                         <span class="text-xs font-mono uppercase tracking-widest text-indigo-400 bg-indigo-950/60 border border-indigo-800/60 px-3 py-1 rounded-full">
-                            ¿Hablamos?
+                            Contacto Directo
                         </span>
                         <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-                            ¿Tienes un proyecto, reto o vacante técnica?
+                            ¿Hablamos de un proyecto o reto técnico?
                         </h2>
                         <p class="text-slate-300 text-sm sm:text-base max-w-xl">
-                            Actualmente me encuentro abierto a colaborar en iniciativas innovadoras, desarrollo de herramientas personalizadas o incorporaciones para prácticas y roles en desarrollo de software.
+                            Estoy abierto a oportunidades profesionales, proyectos de desarrollo a medida y colaboración en herramientas de impacto.
                         </p>
                     </div>
 
                     <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
-                        <!-- Botón interactivo para copiar correo -->
                         <button id="copy-email-btn" 
                                 class="btn-glow w-full flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-glow transition-all duration-200">
                             <i class="fa-regular fa-copy text-base"></i>
@@ -850,11 +854,12 @@
                 </div>
             </div>
 
-            <!-- Canales de Contacto Directo / Redes -->
+            <!-- Canales Directos / Redes -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 
                 <!-- GitHub Card -->
                 <a href="https://github.com/rubenillob-dot" target="_blank" rel="noopener noreferrer" 
+                   data-aos="fade-up" data-aos-delay="100" data-aos-duration="600" 
                    class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-indigo-500/50 flex flex-col justify-between group">
                     <div class="flex items-center justify-between mb-4">
                         <div class="w-12 h-12 rounded-xl bg-slate-800/80 text-white flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
@@ -871,6 +876,7 @@
 
                 <!-- LinkedIn Card (Placeholder Elegante) -->
                 <a href="https://www.linkedin.com/in/ruben-barrado-pastor" target="_blank" rel="noopener noreferrer" 
+                   data-aos="fade-up" data-aos-delay="200" data-aos-duration="600" 
                    class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-blue-500/50 flex flex-col justify-between group">
                     <div class="flex items-center justify-between mb-4">
                         <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 border border-blue-500/30 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
@@ -886,7 +892,8 @@
                 </a>
 
                 <!-- Email Card (Placeholder Elegante) -->
-                <div class="glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between group">
+                <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="600" 
+                     class="glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between group">
                     <div class="flex items-center justify-between mb-4">
                         <div class="w-12 h-12 rounded-xl bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-2xl">
                             <i class="fa-regular fa-envelope"></i>
@@ -896,8 +903,8 @@
                         </span>
                     </div>
                     <div>
-                        <h3 class="text-base font-bold text-white">Correo Electrónico</h3>
-                        <p class="text-xs text-slate-400 font-mono mt-1 select-all" id="email-address">ruben.barrado.dev@gmail.com</p>
+                        <h3 class="text-base font-bold text-white">Correo Profesional</h3>
+                        <p class="text-xs text-slate-400 font-mono mt-1 select-all">ruben.barrado.dev@gmail.com</p>
                         <button onclick="copiarAlPortapapeles('ruben.barrado.dev@gmail.com')" class="text-[11px] text-emerald-400 mt-2 hover:underline flex items-center gap-1">
                             <i class="fa-regular fa-copy text-[10px]"></i>
                             <span>Haz clic para copiar</span>
@@ -919,7 +926,7 @@
                 <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
                 <span class="text-slate-400 font-medium">Rubén Barrado Pastor</span>
                 <span>•</span>
-                <span>© <span id="current-year">2026</span> Todos los derechos reservados.</span>
+                <span>© <span id="current-year">2026</span> DAM Developer. Todos los derechos reservados.</span>
             </div>
 
             <div class="flex items-center gap-6">
@@ -938,26 +945,40 @@
         <i class="fa-solid fa-arrow-up text-sm"></i>
     </button>
 
-    <!-- Toast de Notificación Flotante -->
+    <!-- Toast Flotante -->
     <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-3 bg-dark-900 text-slate-100 border border-indigo-500/40 px-5 py-3 rounded-xl shadow-glow">
         <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
         <span id="toast-message" class="text-xs font-mono font-medium">¡Correo copiado al portapapeles!</span>
     </div>
 
-    <!-- ================= JAVASCRIPT LIGERO Y AUTÓNOMO ================= -->
+    <!-- ================= SCRIPTS ================= -->
+    <!-- AOS (Animate On Scroll) JS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
-        // Actualizar año automáticamente en el footer
+        // 1. Inicialización de la librería AOS con valores calibrados para máxima fluidez y estándar corporativo
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                duration: 750,        // Duración sutil de la animación en ms
+                easing: 'ease-out-cubic', // Curva de aceleración natural
+                once: true,           // La animación se ejecuta una sola vez al entrar para no saturar
+                offset: 60,           // Distancia en píxeles antes de disparar la animación
+                delay: 0,             // Retardo por defecto
+            });
+        });
+
+        // 2. Actualización dinámica del año en el footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Manejo del menú responsive móvil
+        // 3. Menú responsive móvil
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
         const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
         function toggleMenu() {
-            const isExpanded = mobileMenu.classList.toggle('hidden');
-            if (isExpanded) {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            if (isHidden) {
                 menuIcon.classList.remove('fa-xmark');
                 menuIcon.classList.add('fa-bars');
             } else {
@@ -975,7 +996,7 @@
             });
         });
 
-        // Botón flotante 'Volver Arriba'
+        // 4. Botón flotante 'Volver Arriba'
         const backToTopBtn = document.getElementById('back-to-top');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 400) {
@@ -989,7 +1010,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Función reutilizable para copiar al portapapeles con Toast
+        // 5. Toast & Portapapeles
         const toast = document.getElementById('toast');
         const toastMessage = document.getElementById('toast-message');
         let toastTimeout;
@@ -1007,21 +1028,27 @@
         }
 
         function copiarAlPortapapeles(texto) {
-            navigator.clipboard.writeText(texto).then(() => {
-                showToast(`¡Copiado: ${texto}!`);
-            }).catch(err => {
-                // Fallback clásico si no hay permisos de clipboard
-                const textarea = document.createElement('textarea');
-                textarea.value = texto;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-                showToast(`¡Copiado: ${texto}!`);
-            });
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(texto).then(() => {
+                    showToast(`¡Copiado: ${texto}!`);
+                }).catch(() => fallbackCopiar(texto));
+            } else {
+                fallbackCopiar(texto);
+            }
         }
 
-        // Listener para el botón principal de copiar correo
+        function fallbackCopiar(texto) {
+            const textarea = document.createElement('textarea');
+            textarea.value = texto;
+            textarea.style.position = 'fixed';
+            textarea.style.left = '-999999px';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            showToast(`¡Copiado: ${texto}!`);
+        }
+
         const copyBtn = document.getElementById('copy-email-btn');
         const copyBtnText = document.getElementById('copy-email-text');
         
@@ -1031,22 +1058,16 @@
                 copiarAlPortapapeles(email);
                 
                 const originalText = copyBtnText.textContent;
-                copyBtnText.textContent = '¡Copiado!';
+                copyBtnText.textContent = '¡Copiado al portapapeles!';
                 setTimeout(() => {
                     copyBtnText.textContent = originalText;
                 }, 2000);
             });
         }
 
-        // Resaltar enlace de navegación según sección activa (Scrollspy con IntersectionObserver)
+        // 6. Scrollspy con IntersectionObserver para marcar la sección activa
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-link');
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '-30% 0px -60% 0px',
-            threshold: 0
-        };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1063,7 +1084,7 @@
                     });
                 }
             });
-        }, observerOptions);
+        }, { root: null, rootMargin: '-30% 0px -60% 0px', threshold: 0 });
 
         sections.forEach(sec => observer.observe(sec));
     </script>
